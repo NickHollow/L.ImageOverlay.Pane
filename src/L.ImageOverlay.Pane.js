@@ -90,4 +90,10 @@
     L.imageOverlay.pane = function (imageUrl, bounds, options) {
       return new L.ImageOverlay.Pane(imageUrl, bounds, options);
     };
+
+    if (window.gmxCore) {
+        gmxCore.addModule('L.ImageOverlay.Pane', function() {
+            return L.ImageOverlay.Pane;
+        });
+    }
 })();
