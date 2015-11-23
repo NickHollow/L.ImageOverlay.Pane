@@ -92,6 +92,8 @@
     };
 
     if (window.gmxCore) {
-        gmxCore.addModule('L.ImageOverlay.Pane', L.ImageOverlay.Pane);
+        gmxCore.addModule('L.ImageOverlay.Pane', function() {
+            return L.ImageOverlay.Pane;
+        });
     }
 })();
